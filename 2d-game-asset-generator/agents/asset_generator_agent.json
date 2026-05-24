@@ -1,0 +1,53 @@
+{
+  "name": "2D游戏素材生成助手",
+  "description": "AI助手，帮助用户生成2D游戏素材",
+  "version": "1.0.0",
+  "capabilities": [
+    "提示词工程",
+    "素材生成",
+    "风格一致性",
+    "引擎导出"
+  ],
+  "workflow": {
+    "steps": [
+      {
+        "id": "理解需求",
+        "description": "理解用户需求，识别素材类型、风格、尺寸等",
+        "questions": [
+          "需要什么类型的素材？（角色/地图块/UI/图标/背景/特效）",
+          "什么美术风格？（像素艺术/卡通/手绘）",
+          "目标游戏引擎？（Unity/Godot/Phaser/其他）"
+        ]
+      },
+      {
+        "id": "构建提示词",
+        "description": "根据模板构建优化的生成提示词",
+        "references": [
+          "references/prompt-templates.md",
+          "references/art-styles.md"
+        ]
+      },
+      {
+        "id": "生成素材",
+        "description": "调用生成脚本创建素材",
+        "script": "scripts/generate_asset.py"
+      },
+      {
+        "id": "后处理",
+        "description": "后处理：去背景、调整尺寸",
+        "script": "scripts/post_process.py"
+      },
+      {
+        "id": "导出",
+        "description": "导出为引擎可用格式",
+        "script": "scripts/export_for_engine.py"
+      }
+    ]
+  },
+  "prompts": {
+    "greeting": "你好！我是2D游戏素材生成助手。我可以帮你生成：\n- 角色精灵和动画\n- 地图瓦片\n- UI元素\n- 道具图标\n- 背景场景\n- 特效动画\n\n请告诉我你需要什么类型的素材？",
+    "clarification": "为了生成更好的素材，请告诉我：\n1. 素材类型（角色/地图/UI等）\n2. 美术风格（像素艺术/卡通/手绘）\n3. 大致尺寸（如64x64）",
+    "generation_start": "好的！我将为你生成 {asset_type}，风格为 {style}，尺寸 {size}。\n\n生成的提示词：\n{prompt}\n\n开始生成...",
+    "generation_complete": "[成功] 素材生成完成！\n\n文件位置：{output_path}\n\n后续步骤：\n1. 检查素材质量\n2. 如需调整，可以修改提示词重新生成\n3. 使用 post_process.py 进行后处理\n4. 使用 export_for_engine.py 导出到游戏引擎"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "说明": "2D游戏素材生成器配置文件",
+  
+  "backend": "sd-local",
+  "模型选择": {
+    "pixel-art-xl": "nerijs/pixel-art-xl - 专业像素艺术模型（推荐）",
+    "pixel-art": "kohbanye/pixel-art-style - 轻量像素艺术模型",
+    "sd-1.5": "runwayml/stable-diffusion-v1-5 - 通用模型",
+    "sd-2.1": "stabilityai/stable-diffusion-2-1 - 高质量通用模型"
+  },
+  "model": "pixel-art-xl",
+  
+  "quality_check": true,
+  "auto_post_process": true,
+  "generate_variants": false,
+  "variant_count": 4,
+  
+  "post_process": {
+    "说明": "后处理配置",
+    "pixelate": null,
+    "像素化说明": "设置为数字（如4）启用像素化，null禁用",
+    "palette": null,
+    "调色板说明": "可选: pico-8, nes, gameboy, warm-dungeon, cool-fantasy",
+    "remove_bg": true,
+    "outline": false,
+    "auto_crop": true
+  },
+  
+  "generation_params": {
+    "steps": 30,
+    "cfg_scale": 7.5,
+    "seed": -1
+  },
+  
+  "风格预设": {
+    "chrono-trigger": "经典JRPG像素艺术",
+    "celeste": "现代精致像素艺术",
+    "hollow-knight": "手绘风格2D艺术",
+    "stardew-valley": "温馨农场像素艺术",
+    "undertale": "简约表现力像素艺术",
+    "shovel-knight": "NES复古像素艺术",
+    "dead-cells": "流畅动作像素艺术",
+    "terraria": "沙盒冒险像素艺术"
+  },
+  
+  "api_keys": {
+    "openai": "your-openai-api-key-here",
+    "stability": "your-stability-api-key-here"
+  }
+}

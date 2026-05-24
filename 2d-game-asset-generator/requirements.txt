@@ -1,0 +1,24 @@
+# 基础依赖
+Pillow>=10.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# AI图像生成
+openai>=1.0.0
+requests>=2.28.0
+
+# Stable Diffusion本地运行
+diffusers>=0.25.0
+transformers>=4.35.0
+accelerate>=0.25.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# AI抠图
+rembg>=2.0.50
+
+# 可选：ControlNet支持
+# controlnet-aux>=0.0.6
+
+# 可选：图像质量评估
+# opencv-python>=4.8.0

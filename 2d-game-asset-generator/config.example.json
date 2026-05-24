@@ -1,0 +1,46 @@
+{
+  "说明": "配置文件示例 - 复制此文件为 config.json 并填入你的API密钥",
+  "api": {
+    "provider": "openai",
+    "api_key": "你的API密钥",
+    "model": "dall-e-3",
+    "base_url": "https://api.openai.com/v1"
+  },
+  "默认设置": {
+    "style": "16-bit",
+    "size": "64x64",
+    "output_dir": "output"
+  },
+  "风格预设": {
+    "复古RPG": {
+      "style": "16-bit",
+      "palette": "温暖地牢",
+      "outline": "单像素黑色",
+      "lighting": "左上"
+    },
+    "现代像素": {
+      "style": "32-bit",
+      "palette": "丰富色彩",
+      "outline": "彩色",
+      "lighting": "左上"
+    },
+    "手游休闲": {
+      "style": "cartoon",
+      "palette": "明亮街机",
+      "outline": "粗黑色",
+      "lighting": "柔和"
+    }
+  },
+  "引擎设置": {
+    "unity": {
+      "pixels_per_unit": 32,
+      "filter_mode": "Point"
+    },
+    "godot": {
+      "texture_filter": "Nearest"
+    },
+    "phaser": {
+      "pixel_art": true
+    }
+  }
+}
